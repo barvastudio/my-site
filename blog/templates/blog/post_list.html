@@ -1,30 +1,176 @@
 {% load staticfiles %}
-<html>
-    <head>
-        <title>LiveCoinNews</title>
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>LiveCoinNews</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <div class="page-header">
-            <h1><a href="/">LiveCoinNews</a></h1>
-        </div>
-        <div class="content container">
-    <div class="row">
-        <div class="col-md-8">
-            {% for post in posts %}
-                <div class="post">
-                    <div class="date">
-                        <p>Опубликовано: {{ post.published_date }}</p>
+        <link rel="shortcut icon" href="favicon.png" />
+        <link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
+        <link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" />
+        <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css" />
+        <link rel="stylesheet" href="libs/countdown/jquery.countdown.css" />
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 ml-auto">
+					<h1>LiveCoinNews</h1>
+				</div>
+				<div class="col-lg-4">
+					<img src={% static "img/baner01.png" %}>
+				</div>
+				<div class="col-lg-5 ml-auto">
+					<h1>LiveCoinNews@support.org</h1>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12">
+					<nav class="menu">
+						<li class="menu__item"><a href="">Новости</a></li>
+						<li class="menu__item"><a href="">Обучение</a></li>
+						<li class="menu__item"><a href="">Валюты</a></li>
+						<li class="menu__item"><a href="">Биржи</a></li>
+						<li class="menu__item"><a href="">Майнинг</a></li>
+						<li class="menu__item"><a href="">Кошельки</a></li>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<nav>
+				<ul class="podmenu">
+					 <li class="active">
+        <a href="#">Bitcoin</a>
+      </li>
+      <li>
+        <a href="#" >Ethereum</a>
+      </li>
+      <li>
+        <a href="#">Bitcoin</a>
+      </li>
+            <li>
+        <a href="#">Ethereum</a>
+      </li>
+            <li>
+        <a href="#">Bitcoin</a>
+      </li>
+            <li>
+        <a href="#" >Ethereum</a>
+      </li>
+      <li>
+        <a href="#">Bitcoin</a>
+      </li>
+            <li>
+        <a href="#">Ethereum</a>
+      </li>
+            <li>
+        <a href="#">Bitcoin</a>
+      </li>
+				</ul>
+			</nav>
+			<div class="banner">
+			<img src={% static "img/baner1.png" %}>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="main">
+				<div class="content container">
+                <div class="row">
+                    <div class="col-md-8">
+                        {% for post in posts %}
+                        <div class="post">
+                            
+                            <h1><a href="">{{ post.title }}</a></h1>
+                            <p>{{ post.text|linebreaksbr }}</p>
+                            <div class="date">
+                                <p>Опубликовано: {{ post.published_date }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
                     </div>
-                    <h1><a href="">{{ post.title }}</a></h1>
-                    <p>{{ post.text|linebreaksbr }}</p>
                 </div>
-            {% endfor %}
-        </div>
-    </div>
+            </div>
+			</div>
+		</div>
+	</div>
 </div>
-    </body>
+
+	</section>
+	<footer class="footer">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3">
+			<h1>LOGO</h1>
+		</div>
+		<div class="col-lg-9">
+			<div class="contacts">
+				<ul class="footer_menu">
+					<li>
+						Новичкам
+					</li>
+					<li class="d!ash">|</li>
+					<li>
+						Рейтинги
+					</li>
+					<li class="dash">|</li>
+					<li>
+						Кошельки
+					</li>
+				</ul>
+			</div>
+			<div class="social">
+				<ul class="social_menu">
+					<li>
+					<p>facebook</p>	
+					</li>
+					<li>
+					<p>facebook<i class="fa fa-facebook">	</i></p>
+					</li>
+					<li>
+					facebook
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+	</footer>
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+	<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+	<script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="libs/waypoints/waypoints-1.6.2.min.js"></script>
+	<script src="libs/scrollto/jquery.scrollTo.min.js"></script>
+	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+	<script src="libs/countdown/jquery.plugin.js"></script>
+	<script src="libs/countdown/jquery.countdown.min.js"></script>
+	<script src="libs/countdown/jquery.countdown-ru.js"></script>
+	<script src="libs/landing-nav/navigation.js"></script>
+	<script src="js/common.js"></script>
+	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
 </html>
