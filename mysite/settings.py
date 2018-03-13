@@ -25,7 +25,7 @@ SECRET_KEY = '2t464ljgrx6(_xa)=2$$uew@s6+3lmqj^!y+p9u%g9&ysge_4u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'barvastudio.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'hameo.pythonanywhere.com']
 
 
 # Application definition
